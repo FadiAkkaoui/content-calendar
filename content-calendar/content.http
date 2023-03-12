@@ -1,0 +1,20 @@
+### Find All Content
+GET http://localhost:8081/api/content
+
+### Get Content By Id
+GET http://localhost:8081/api/content
+
+### Create new Content
+POST http://localhost:8081/api/content
+Content-Type: application/json
+
+{
+    "id": 2,
+    "title": "My Second Blog Post",
+    "desc": "My Second Blog Post",
+    "status": "IDEA",
+    "contentType": "ARTICLE",
+    "dateCreated": "2023-03-12T14:05:56.983059",
+    "dateUpdated": null,
+    "url": ""
+}
