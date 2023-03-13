@@ -42,10 +42,16 @@ public class ContentCollectionRepository {
     }
 
     public void save(Content content) {
+        // if content exists, remove and add it again.
+        contentList.removeIf(c -> c.id().equals(content.id()));
         contentList.add(content);
     }
 
     public boolean existsById(Integer id) {
         return contentList.stream().filter(content -> content.id().equals(id)).count() == 1;
+    }
+
+    public void delete(Integer id) {
+        contentList.removeIf(c -> c.id().equals(id));
     }
 }

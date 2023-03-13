@@ -2,6 +2,7 @@ package akkaoui.fadi.contentcalendar.model;
 
 import java.time.LocalDateTime;
 
+
 public record Content(
     Integer id,
     String title,
